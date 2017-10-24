@@ -1,0 +1,36 @@
+{ 
+	"name": "Chicken and Shrimp Pasta", 
+	"price": 13.50, 
+	"availability": true, 
+	"productionCost": 8.50,
+	"contains":
+		{
+			"dairy": true,
+			"nuts": false,
+			"vegetarian": false
+		}
+},
+{
+	"name": "Chicken Parmigiana",
+	"price": 11.25,
+	"availability": true,
+	"productionCost": 7.25,
+	"contains":
+		{
+			"dairy": true,
+			"nuts": false,
+			"vegetarian": false
+		}
+},
+{
+	"name": "Cheese Quesadilla",
+	"price": 9.50,
+	"availability": true,
+	"productionCost": 5.00,
+	"contains":
+		{
+			"dairy": true,
+			"nuts": false,
+			"vegetarian": true
+		}
+}

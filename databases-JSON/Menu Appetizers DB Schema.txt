@@ -1,0 +1,36 @@
+{ 
+	name: 'Cheeseburger Sliders', 
+	price: 6.50, 
+	availability: true, 
+	productionCost: 4.50,
+	contains:
+		{
+			dairy: true,
+			nuts: true,
+			vegetarian: false
+		}
+},
+{
+	name: 'Chicken Tenders',
+	price: 5.25,
+	availability: true,
+	productionCost: 3.50,
+	contains:
+		{
+			dairy: false,
+			nuts: false,
+			vegetarian: false
+		}
+},
+{
+	name: 'Grilled Cheese',
+	price: 3.25,
+	availability: true,
+	productionCost: 2.00,
+	contains:
+		{
+			dairy: true,
+			nuts: false,
+			vegetarian: true
+		}
+}

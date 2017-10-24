@@ -1,0 +1,18 @@
+{ 
+	"name": "Lemonade Iced Tea", 
+	"price": 2.50, 
+	"availability": true, 
+	"productionCost": 0.75,
+},
+{
+	"name": "Mango Sangria",
+	"price": 8.25,
+	"availability": true,
+	"productionCost": 4.25,
+},
+{
+	"name": "Beer",
+	"price": 4.50,
+	"availability": true,
+	"productionCost": 2.00,
+}

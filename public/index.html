@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<title>EasyEats Menu</title>
+	</head>
+	<body ng-controller="AppController">
+	<div style="font-size: 25px;">
+	<p align="center">
+	<a href="takeout.html">Takeout</a>
+	</p>
+	<p align="center">
+	<a href="reservations.html">Reservations</a>
+	</p>
+	</div>
+		<div class="container">
+			<h1>Welcome to EasyEats!</h1>
+			</br>
+
+
+			<!--Filter options for menu-->
+			<input type="checkbox" ng-model="dairy" ng-change="dairyChange()" ng-true-value="{{dairyFilter}}"> Filter out products with dairy
+			<br>
+			<input type="checkbox" ng-model="nuts" ng-change="nutsChange()" ng-true-value="{{nutsFilter}}"> Filter out products with nuts
+			<br>
+			<input type="checkbox" ng-model="vegetarian" ng-change="vegChange()" ng-true-value="{{vegFilter}}"> Filter out non-vegetarian items
+
+
+			<!--Display menu using ng-repeat and databases-->
+			<h2>Appetizers</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Availability</th>
+						<th>Contains</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in menu" ng-show="item.availability" ng-hide="{{item.contains.dairy}} === dairyFilter || {{item.contains.nuts}} === nutsFilter || {{item.contains.vegetarian}} === vegFilter">
+						<td>{{item.name}}</td>
+						<td>{{item.price | currency}}</td>
+						<td>{{item.availability}}</td>
+						<td>Dairy: {{item.contains.dairy}} </br> Nuts: {{item.contains.nuts}} </br> Vegetarian: {{item.contains.vegetarian}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Entrees</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Availability</th>
+						<th>Contains</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in menu2" ng-show="item.availability" ng-hide="{{item.contains.dairy}} === dairyFilter || {{item.contains.nuts}} === nutsFilter || {{item.contains.vegetarian}} === vegFilter">
+						<td>{{item.name}}</td>
+						<td>{{item.price | currency}}</td>
+						<td>{{item.availability}}</td>
+						<td>Dairy: {{item.contains.dairy}} </br> Nuts: {{item.contains.nuts}} </br> Vegetarian: {{item.contains.vegetarian}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Desserts</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Availability</th>
+						<th>Contains</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in menu3" ng-show="item.availability" ng-hide="{{item.contains.dairy}} === dairyFilter || {{item.contains.nuts}} === nutsFilter || {{item.contains.vegetarian}} === vegFilter">
+						<td>{{item.name}}</td>
+						<td>{{item.price | currency}}</td>
+						<td>{{item.availability}}</td>
+						<td>Dairy: {{item.contains.dairy}} </br> Nuts: {{item.contains.nuts}} </br> Vegetarian: {{item.contains.vegetarian}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2>Drinks</h2>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Price</th>
+						<th>Availability</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in menu4" ng-show="item.availability">
+						<td>{{item.name}}</td>
+						<td>{{item.price | currency}}</td>
+						<td>{{item.availability}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="controllers/controller.js"></script>
+	</body>
+</html>

@@ -1,0 +1,36 @@
+{ 
+	name: 'Chocolate Lava Cake', 
+	price: 4.50, 
+	availability: true, 
+	productionCost: 2.50,
+	contains:
+		{
+			dairy: true,
+			nuts: true,
+			vegetarian: true
+		}
+},
+{
+	name: 'Ice Cream Sundae',
+	price: 3.25,
+	availability: true,
+	productionCost: 1.25,
+	contains:
+		{
+			dairy: true,
+			nuts: true,
+			vegetarian: true
+		}
+},
+{
+	name: 'Cheesecake',
+	price: 6.50,
+	availability: true,
+	productionCost: 3.00,
+	contains:
+		{
+			dairy: true,
+			nuts: true,
+			vegetarian: true
+		}
+}

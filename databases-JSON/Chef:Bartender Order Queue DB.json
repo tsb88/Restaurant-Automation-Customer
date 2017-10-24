@@ -1,0 +1,20 @@
+{
+  order_queue_bartender: 
+  [ null, 
+    {
+      name: "drink",
+      table: "table1"
+    }, 
+    {
+     name: "fries",
+     table: "table1"
+    }
+  ],
+  order_queue_chef: 
+  [ null, 
+    {
+     name: "burger",
+     table: "table1"
+    } 
+  ]
+}
